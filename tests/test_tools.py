@@ -98,7 +98,8 @@ class InstallerTests(unittest.TestCase):
             write(source, "__pycache__/cached.pyc", "cache")
             write(root / "project", "README.md", "project documentation")
             target = installer.install_skill(source, root / "custom skills")
-            self.assertEqual(target, root / "custom skills" / installer.SKILL_NAME)
+            # Windows may expose the same directory through an 8.3 short name.
+            self.assertTrue(target.samefile(root / "custom skills" / installer.SKILL_NAME))
             self.assertTrue((target / "references/note.md").is_file())
             self.assertFalse((target / "README.md").exists())
             self.assertFalse((target / "__pycache__").exists())
