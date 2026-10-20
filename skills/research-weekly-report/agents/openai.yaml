@@ -1,0 +1,6 @@
+interface:
+  display_name: "科研周报写作"
+  short_description: "根据真实阅读与研究记录撰写中文周报，保留个人思考、原有篇幅和表达习惯"
+  default_prompt: "使用 $research-weekly-report，根据我提供的材料和样稿写完整科研周报，保留我的思考，区分实际完成工作与下一步设想。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.coverage
+dist/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+private/
+local-notes/
+*.pdf
+*.docx
+*.pptx
+*.xlsx
